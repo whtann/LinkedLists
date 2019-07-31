@@ -6,7 +6,7 @@ int main()
     int choice;
     while (1)
     {
-        cout << "SIMPLE LINKED LIST" << endl
+        cout << "DOUBLY LINKED LIST" << endl
              << "MENU" << endl
              << "---------------" << endl;
         cout << "1. Display" << endl
