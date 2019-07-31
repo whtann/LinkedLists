@@ -22,6 +22,21 @@ public:
     void display();
 };
 
+class singlyCircularLinkedList
+{
+private:
+    SLLNode *head;
+    int count;
+
+public:
+    //constructors & destructor
+    singlyCircularLinkedList();
+    ~singlyCircularLinkedList();
+    //functions
+    void addNode();
+    void display();
+};
+
 struct DLLNode
 {
     DLLNode *previousNode;
@@ -35,9 +50,24 @@ private:
     DLLNode *head;
 
 public:
-    //constructors & destructor
+    //constructor & destructor
     doublyLinkedList();
     ~doublyLinkedList();
+    //functions
+    void addNode();
+    void display();
+};
+
+class doublyCircularLinkedList
+{
+private:
+    DLLNode *head;
+    int count;
+
+public:
+    //constructor & destructor
+    doublyCircularLinkedList();
+    ~doublyCircularLinkedList();
     //functions
     void addNode();
     void display();
