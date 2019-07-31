@@ -45,7 +45,7 @@ void doublyCircularLinkedList::addNode()
     {
         head = new DLLNode;
         head->previousNode = nullptr;
-        cout << "ENTER Doubly LL #: ";
+        cout << "ENTER Doubly Circular LL #: ";
         cin >> head->data;
         head->nextNode = nullptr;
         count = 1;
@@ -60,7 +60,7 @@ void doublyCircularLinkedList::addNode()
         }
         temp->nextNode = new DLLNode;
         temp->nextNode->previousNode = temp;
-        cout << "ENTER Doubly LL #: ";
+        cout << "ENTER Doubly Circular LL #: ";
         cin >> temp->nextNode->data;
         temp->nextNode->nextNode = head;
         head->previousNode = temp->nextNode;
@@ -76,6 +76,7 @@ void doublyCircularLinkedList::display()
     {
         cout << temp->data << ", ";
         temp = temp->nextNode;
+        pos++;
     }
     cout << endl;
 }

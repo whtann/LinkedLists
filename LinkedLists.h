@@ -18,7 +18,8 @@ public:
     singlyLinkedList();
     ~singlyLinkedList();
     //functions
-    void addNode();
+    void pushBack();
+    void pushFront();
     void display();
 };
 
@@ -33,7 +34,9 @@ public:
     singlyCircularLinkedList();
     ~singlyCircularLinkedList();
     //functions
-    void addNode();
+    void pushBack();
+    void pushFront();
+    void displayLoop();
     void display();
 };
 
