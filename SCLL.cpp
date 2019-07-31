@@ -6,6 +6,7 @@ int main()
     int choice;
     while (1)
     {
+        //menu
         cout << "SIMPLE LINKED LIST" << endl
              << "MENU" << endl
              << "---------------" << endl;
@@ -53,12 +54,14 @@ int main()
     return 0;
 }
 
+//default constructor
 singlyCircularLinkedList::singlyCircularLinkedList()
 {
     head = nullptr;
     count = 0;
 }
 
+//destructor
 singlyCircularLinkedList::~singlyCircularLinkedList()
 {
     if (head)
@@ -76,6 +79,7 @@ singlyCircularLinkedList::~singlyCircularLinkedList()
     }
 }
 
+//member function for adding numbers to the end of the list
 void singlyCircularLinkedList::pushBack()
 {
     if (!head)
@@ -84,7 +88,7 @@ void singlyCircularLinkedList::pushBack()
         cout << "ENTER Singly Circular LL #: ";
         cin >> head->data;
         cout << endl;
-        head->nextNode = nullptr;
+        head->nextNode = head;
         count = 1;
     }
     else
@@ -114,7 +118,7 @@ void singlyCircularLinkedList::pushFront()
         cout << "ENTER Singly Circular LL #: ";
         cin >> head->data;
         cout << endl;
-        head->nextNode = nullptr;
+        head->nextNode = head;
         count = 1;
     }
     else

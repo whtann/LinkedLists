@@ -57,7 +57,8 @@ public:
     doublyLinkedList();
     ~doublyLinkedList();
     //functions
-    void addNode();
+    void pushBack();
+    void pushFront();
     void display();
 };
 
@@ -72,6 +73,8 @@ public:
     doublyCircularLinkedList();
     ~doublyCircularLinkedList();
     //functions
-    void addNode();
+    void pushBack();
+    void pushFront();
+    void displayLoop();
     void display();
 };

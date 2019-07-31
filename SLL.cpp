@@ -6,6 +6,7 @@ int main()
     int choice;
     while (1)
     {
+        //menu
         cout << "SIMPLE LINKED LIST" << endl
              << "MENU" << endl
              << "---------------" << endl;
@@ -49,11 +50,13 @@ int main()
     return 0;
 }
 
+//default constructor
 singlyLinkedList::singlyLinkedList()
 {
     head = nullptr;
 }
 
+//destructor
 singlyLinkedList::~singlyLinkedList()
 {
     if (head)
@@ -70,6 +73,7 @@ singlyLinkedList::~singlyLinkedList()
     }
 }
 
+//member function for adding numbers to the end of the list
 void singlyLinkedList::pushBack()
 {
     if (!head)
@@ -96,6 +100,7 @@ void singlyLinkedList::pushBack()
     }
 }
 
+//member function for adding numbers to the beginning of the list
 void singlyLinkedList::pushFront()
 {
     if (!head)
@@ -117,6 +122,7 @@ void singlyLinkedList::pushFront()
     }
 }
 
+//member function for displaying the numbers in the list
 void singlyLinkedList::display()
 {
     SLLNode *temp = head;
