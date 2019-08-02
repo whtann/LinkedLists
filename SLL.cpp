@@ -76,6 +76,7 @@ singlyLinkedList::~singlyLinkedList()
 //member function for adding numbers to the end of the list
 void singlyLinkedList::pushBack()
 {
+    //if the list doesn't exist, create it
     if (!head)
     {
         head = new SLLNode;
@@ -84,6 +85,7 @@ void singlyLinkedList::pushBack()
         cout << endl;
         head->nextNode = nullptr;
     }
+    //if the list does exist add a node to the end of the list
     else
     {
         SLLNode *temp = head;
@@ -103,6 +105,7 @@ void singlyLinkedList::pushBack()
 //member function for adding numbers to the beginning of the list
 void singlyLinkedList::pushFront()
 {
+    //if the list doesn't exist, create it
     if (!head)
     {
         head = new SLLNode;
@@ -111,6 +114,7 @@ void singlyLinkedList::pushFront()
         cout << endl;
         head->nextNode = nullptr;
     }
+    //if the list does exist add a node to the beginning of the list
     else
     {
         SLLNode *temp = head;

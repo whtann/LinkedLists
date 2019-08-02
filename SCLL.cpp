@@ -82,6 +82,7 @@ singlyCircularLinkedList::~singlyCircularLinkedList()
 //member function for adding numbers to the end of the list
 void singlyCircularLinkedList::pushBack()
 {
+    //if the list doesn't exist, create it
     if (!head)
     {
         head = new SLLNode;
@@ -91,6 +92,7 @@ void singlyCircularLinkedList::pushBack()
         head->nextNode = head;
         count = 1;
     }
+    //if the list does exist add a node to the end of the list
     else
     {
         SLLNode *temp = head;
@@ -110,8 +112,10 @@ void singlyCircularLinkedList::pushBack()
     }
 }
 
+//member function for adding numbers to the beginning of the list
 void singlyCircularLinkedList::pushFront()
 {
+    //if the list doesn't exist, create it
     if (!head)
     {
         head = new SLLNode;
@@ -121,6 +125,7 @@ void singlyCircularLinkedList::pushFront()
         head->nextNode = head;
         count = 1;
     }
+    //if the list does exist add a node to the beginning of the list
     else
     {
         SLLNode *temp = head;
@@ -140,6 +145,7 @@ void singlyCircularLinkedList::pushFront()
     }
 }
 
+//displays all nodes in the linked list
 void singlyCircularLinkedList::display()
 {
     SLLNode *temp = head;
@@ -154,6 +160,7 @@ void singlyCircularLinkedList::display()
          << endl;
 }
 
+//displays all nodes twice to demonstrate circular properties of the list
 void singlyCircularLinkedList::displayLoop()
 {
     SLLNode *temp = head;

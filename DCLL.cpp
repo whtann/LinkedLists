@@ -65,21 +65,27 @@ doublyCircularLinkedList::doublyCircularLinkedList()
 //destructor
 doublyCircularLinkedList::~doublyCircularLinkedList()
 {
+    //if the list exists
     if (head)
     {
+        //create a node pointer to iterate through the list
         DLLNode *current;
         current = head;
         while (current)
         {
+            //if the node has a previous node delete the previous node
             if (current->previousNode)
             {
                 delete current->previousNode;
             }
+            //if there is no node after the current node delete the node and
+            //end the loop
             if (!current->nextNode)
             {
                 delete current;
                 break;
             }
+            //move to the next node
             current = current->nextNode;
         }
         head = nullptr;
@@ -90,6 +96,7 @@ doublyCircularLinkedList::~doublyCircularLinkedList()
 //member function for adding numbers to the end of the list
 void doublyCircularLinkedList::pushBack()
 {
+    //if the list doesn't exist, create it
     if (!head)
     {
         head = new DLLNode;
@@ -100,6 +107,7 @@ void doublyCircularLinkedList::pushBack()
         head->nextNode = head;
         count = 1;
     }
+    //if the list does exist add a node to the end of the list
     else
     {
         DLLNode *temp = head;
@@ -120,8 +128,10 @@ void doublyCircularLinkedList::pushBack()
     }
 }
 
+//member function for adding numbers to the beginning of the list
 void doublyCircularLinkedList::pushFront()
 {
+    //if the list doesn't exist, create it
     if (!head)
     {
         head = new DLLNode;
@@ -132,6 +142,7 @@ void doublyCircularLinkedList::pushFront()
         head->nextNode = nullptr;
         count = 1;
     }
+    //if the list does exist add a node to the beginning of the list
     else
     {
         DLLNode *temp = head;
@@ -153,6 +164,7 @@ void doublyCircularLinkedList::pushFront()
     }
 }
 
+//displays all the nodes in the linked list
 void doublyCircularLinkedList::display()
 {
     DLLNode *temp = head;
@@ -167,6 +179,8 @@ void doublyCircularLinkedList::display()
          << endl;
 }
 
+//displays all the nodes twice to demonstrate circular properties of the list
+//then iterates backward twice to demonstrate circular and double properties
 void doublyCircularLinkedList::displayLoop()
 {
     DLLNode *temp = head;
@@ -179,7 +193,7 @@ void doublyCircularLinkedList::displayLoop()
     }
     cout << endl
          << "Printing backwards" << endl;
-    //resetting node to previous node
+    //resetting node to previous node to begin printing backwards
     temp = temp->previousNode;
     while (temp && pos > 0)
     {
